@@ -7,5 +7,5 @@ const requestHandler = (req, res) => {
 
 const server = http.createServer(requestHandler);
 server.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server ... running on port ${port}`);
 });
