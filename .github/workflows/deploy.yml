@@ -2,7 +2,7 @@ name: Deploy to EC2
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -21,6 +21,6 @@ jobs:
             docker rm -f cicd-lab || true
             cd ~/app
             rm -rf *
-            git clone https://github.com/<your-username>/cicd-lab.git .
+            git clone https://github.com/kaleakash/cicd-lab.git .
             docker build -t cicd-lab .
             docker run -d -p 80:3000 --name cicd-lab cicd-lab
